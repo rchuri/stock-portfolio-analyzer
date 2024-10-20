@@ -4,16 +4,6 @@ import yfinance as yf
 import plotly.graph_objects as go
 from fuzzywuzzy import process
 
-# Add "Project by: Rohit Churi" with LinkedIn profile link
-st.markdown(
-    """
-    <div style="text-align: right;">
-        <small>Project by: <a href="https://www.linkedin.com/in/rohit-churi/" target="_blank">Rohit Churi</a></small>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-
 # Load tickers from the CSV file
 st.session_state.sym = pd.read_csv("stocks.csv")
 st.session_state.sym.columns = [
